@@ -1,0 +1,453 @@
+/* Importations des différents styles de font
+====================================================*/
+@font-face
+{
+    font-family: Rowdies;
+    src: url(../fonts/Rowdies-Bold.ttf);
+}
+@font-face
+{
+    font-family: Satisfy;
+    src: url(../fonts/Satisfy-Regular.ttf);
+}
+
+
+
+/* Normalisation supplémentaire
+=============================================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Styles de base
+=============================================== */
+html {
+	height: 100vh;
+	scroll-behavior: smooth;
+	font-size: clamp(14px, 0.5rem + 1vw, 18px);
+}
+
+header {
+	font-family: Satisfy;
+}
+
+body {
+	width: 100%;
+	min-height: 100%;
+	background-color: #eee;
+	color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+	/*Conteneur flex en colonne*/
+	display: flex;
+	flex-direction: column; 
+}
+
+main.contenu {
+	background-color: #ffffff;
+	flex-wrap: nowrap;
+
+	/*S'étire pour prendre toute la place en largeur*/
+	flex-grow: 1;
+
+	/*Conteneur flex en colonne*/
+	display: flex;
+	flex-direction: column;
+	background-image: url("../images/GrandeTaille/fond2Web.png");
+}
+
+section {
+	padding: 4.5rem;
+	color: #ffffff;
+	margin: 20px 10px;
+	
+
+}
+
+section:nth-child(even) {
+	/*Les couleurs sont inversées pour les sections paires*/
+	background-color: #9cff95;
+	color: #42455a;
+}
+
+.barre-menu,
+.menu,
+footer {
+	background: #333;
+	color: #ddd;
+}
+
+/*Style du menu
+================================*/
+nav .annee a {
+	display: block;
+	padding: 0.5rem 1rem;
+	margin-bottom: 0.2rem;
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #ddd;
+	text-align: center;
+}
+
+nav a:hover {
+	background: #efff11;
+	color: #252525;
+}
+
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	/*Le texte arrive vers la gauche au tout début*/
+	animation: arrivee-gauche 2s cubic-bezier(.14,.66,.34,.85);
+	animation-fill-mode: backwards;
+	padding: 5rem;
+}
+
+footer {
+	height: 5vh;
+	padding: 3.5rem;
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+}
+
+/* Contrôle du menu et du bouton burger...
+========================================================================== */
+
+#cc-pour-bouton-burger:checked ~ .barre-menu > .bouton-burger {
+	rotate: 90deg;
+}
+
+/*
+On déplace le menu vers la droite, en lui enlevant la translation déjà appliquée
+*/
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu {
+	translate: 0;
+}
+
+#cc-pour-bouton-burger {
+	/*On cache la case à cocher*/
+	display: none;
+}
+
+/* Mise en page pour les petits périphériques
+=============================================== */
+
+.barre-menu {
+	
+	
+	height: 10vh;
+	
+	-webkit-box-shadow: 0 9px 20px 12px #808080;
+	box-shadow: 9px 9px 20px 12px #808080;
+	/*
+	Conteneur flex en rangée avec alignement à droite pour
+	les petits périphériques. Et les items-flex sont centrés
+	sur l'axe secondaire.
+	*/
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+.menu {
+	width: 50%;
+	/*Position fixe sur petit écran en bas de la barre de la barre de menu*/
+	position: fixed;
+	top: 10vh;
+
+	/*Sa hauteur est celle de la hauteur du viewport MOINS celle de la barre de navigation*/
+	height: 90vh;
+	/*Conteneur flex en colonne avec élément centré au milieu*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*Au démarrage on met le menu complètement à gauche*/
+	translate: 100%;
+
+	/*Mettre le menu par-dessus tout*/
+	z-index: 999;
+
+	/*Effet de transition*/
+	transition: translate 500ms;
+}
+
+.bouton-burger {
+	display: block;
+	height: 2rem;
+	width: 2rem;
+	margin: 0.5rem;
+	background: linear-gradient(
+		to bottom,
+		#ddd 0%,
+		#ddd 20%,
+		transparent 20%,
+		transparent 40%,
+		#ddd 40%,
+		#ddd 60%,
+		transparent 60%,
+		transparent 80%,
+		#ddd 80%,
+		#ddd 100%
+	);
+	cursor: pointer;
+	transition: rotate 400ms;
+}
+
+.bouton-burger:hover  {
+	background: linear-gradient(
+		to bottom,
+		#efff11 0%,
+		#efff11 20%,
+		transparent 20%,
+		transparent 40%,
+		#efff11 40%,
+		#efff11 60%,
+		transparent 60%,
+		transparent 80%,
+		#efff11 80%,
+		#efff11 100%
+	);
+}
+
+/* Mise en page pour les grilles photos
+=============================================*/
+
+#model3D {
+	height: 100vh; /* prend toute la hauteur de l'écran */
+    background-image: url('../images/GrandeTaille/Masque.jpg'); /* chemin de ton image */
+    background-size: cover; /* couvre toute la section */
+    background-position: center; /* centre l'image */
+    background-repeat: no-repeat; /* ne pas répéter */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	z-index: 1;
+}
+
+#dessins {
+	height: 100vh; /* prend toute la hauteur de l'écran */
+    background-image: url('../images/GrandeTaille/tigre.png'); /* chemin de ton image */
+    background-size: cover; /* couvre toute la section */
+    background-position: center; /* centre l'image */
+    background-repeat: no-repeat; /* ne pas répéter */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	z-index: 1;
+}
+
+
+
+#montageVideo, #jeuVideo {
+  position: relative;
+  width: 100%;
+  height: 500px; /* La hauteur que tu veux pour ta section */
+  overflow: hidden;
+}
+
+.video-background{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  width: auto;
+  height: auto;
+  z-index: 0;
+}
+
+
+.Giroma {
+	width: 200px; /* ou un % */
+	height: auto; /* conserve les proportions */
+	animation: flotter 3s ease-in-out infinite;
+    display: block;
+    margin: 0 auto; /* centre l'image horizontalement */
+}
+
+
+.conteneurDesPhotos {
+	/*Conteneur flex en rangé*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 4.5rem;
+	opacity: 0;
+}
+
+.photo {
+	/* Les photos sont placés en rangés*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-size: 20px; /* taille du texte en pixels */
+	
+	
+
+	margin-top: 1.5rem;
+	background-color: rgb(74, 74, 74);
+	opacity: 0.5;
+	border-radius: 10px;
+
+	/*lèger ombrage autour des photos*/
+	-webkit-box-shadow: 1px 2px 20px 2px #252525;
+	box-shadow: 1px 2px 20px 2px #252525;
+	padding: 3.5rem;
+	transition: background-color 0.5s;
+	color: #ddd;
+	cursor: pointer;
+
+	transition: scale 1.5s, transform 1.5s;
+	transition: color  0.3s ease, background-color  0.3s ease, transform 0.3s ease;
+	
+	z-index: -1;
+}
+
+.photo:hover {
+	background-color: #efff11;
+	color: black;
+	opacity: 1;
+	transform: scale(10px);
+	transform: scale(1.2); /* augmente la taille de 20% */
+}
+
+.logo{
+	width: 80px;
+	height: 40px;
+	padding-right: 1.5rem;
+	animation: animation-logo 2s infinite;
+    animation-timing-function: linear;	
+}
+
+.titre {
+	font-family: Rowdies;
+	padding-right: 1.5rem;
+	animation: animation-titre 2s;
+	animation-fill-mode: backwards;
+}
+
+
+.titreAnnee {
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+}
+
+/*Classe pour révéler les sections*/
+.active.fondu-en-bas {
+	animation: fondu-en-bas 700ms cubic-bezier(.17, .67, .88, 1.46) forwards;
+}
+
+
+/* Styles pour les écrans plus larges
+=============================================== */
+
+@media screen and (min-width: 768px) {
+
+body {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+h1 {
+	padding-bottom: 4.5rem;
+	padding-top: 1.5rem;
+}
+
+.logo{
+	width: 120px;
+	height: 80px;
+	padding-top: 1.5rem;
+}
+
+.menu {
+	width: 100%;
+	position: static;
+	height: auto;
+	flex-direction: column;
+	translate: 0;
+}
+
+.menu a {
+	flex-grow: 1;
+}
+
+.barre-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: auto;
+}
+
+.bouton-burger {
+	/*On cache le bouton burger*/
+	display: none;
+}
+
+
+}
+
+@media screen and (min-width: 991px) {
+
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.logo{
+		width: 160px;
+		height: 120px;
+	}
+
+	.menu {
+		width: 100%;
+		position: static;
+		height: auto;
+		flex-direction: column;
+		translate: 0;
+	}
+	.annee  {
+		position: static;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		translate: 0;
+	}
+
+	.filtre  {
+		position: static;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		translate: 0;
+	}
+
+	.menu a {
+		flex-grow: 1;
+	}
+
+	.barre-menu {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+
+	.bouton-burger {
+		/*On cache le bouton burger*/
+		display: none;
+	}
+
+   
+}

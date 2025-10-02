@@ -1,0 +1,131 @@
+
+
+        
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        
+        <title>Portfolio de  Valérie Giroux</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="animations/animations.css">
+        <link rel="icon" type="image/png" href="images/Logo/Giroma.png">
+        <!-- Ajustement de la taille du viewport-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <!--Case à cocher-->
+        <input type="checkbox" id="cc-pour-bouton-burger" />
+
+        <div class="barre-menu">
+                <!-- Icône logo du site et titre -->
+                <h1 class="titre">Portfolio</h1>
+            
+            <!-- Bouton burger-->
+            <label for="cc-pour-bouton-burger" class="bouton-burger"></label>
+            
+            <nav class="menu">
+                <div class="annee">
+                    <a href="#model3D">Model 3D</a>
+                    <a href="#jeuVideo">Jeu Video</a>
+                    <a href="#dessins">Dessins</a>
+                    <a href="#montageVideo">MontageVideo</a>
+                    <a href="#contact">Contact</a>
+                    
+                </div>
+            </nav>
+        </div>
+
+        <main class="contenu">
+                <header id="header">
+                    <h1><em>Bienvenue dans mon portfolio, je suis présentement étudiante et je suis très passionnée dans ce que je fait. C'est un plaisir de toujours apprendre et crée en même temps.</em></h1>
+                    <img src="Images/Logo/Giroma.png" alt="Logo" class="Giroma">
+                </header>
+
+            
+                <section id="model3D">
+
+                    <!-- Pour les autres pages  <div class="galerie">
+                        <img src="images/GrandeTaille/Casque.png" alt="Image 1">
+                        <img src="images/GrandeTaille/Masque.jpg" alt="Image 2">
+                        <img src="images/GrandeTaille/Sceptre.png" alt="Image 3">
+                        <img src="image4.jpg" alt="Image 4">
+                        <img src="image5.jpg" alt="Image 5">
+                    </div> -->
+
+                    <div class="conteneurDesPhotos fondu-en-bas">
+
+                        <a style="text-decoration: none;" href="model3D.html">
+                            <div class="photo">
+                                <picture>
+                                    <!-- Reference <source media="(min-width: 992px)" srcset="images/GrandeTaille/amal-bendiame.png">
+                                    <source media="(min-width: 768px)" srcset="images/Tablette/amal-bendiame.jpg">
+                                    <img src="images/Mobile/amal-bendiame.jpg" alt="Photo"> -->
+                                </picture>
+                                <div class="recouvrir"></div>
+                                <p>Model 3D</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+            </section>
+
+        
+            <section id="jeuVideo">
+                <video class="video-background" autoplay loop muted playsinline>
+                
+                    <source src="videos/VideoPromotionnelleOmbre.mp4" type="video/mp4">
+                
+                </video>
+                
+                <div class="conteneurDesPhotos fondu-en-bas">
+
+                    <div class="photo">
+                        <picture>
+
+                        </picture>
+                        <p>Jeux vidéo</p>
+                    </div>
+                </div>
+                </section>
+
+                
+                <section id="dessins">
+                    <div class="conteneurDesPhotos fondu-en-bas">
+                        
+                        <div class="photo">
+                            <picture>
+                            </picture>
+                                <p>Dessins</p>
+                        </div>
+                    </div>
+            </section>
+
+            
+            <section id="montageVideo">
+                <video class="video-background" autoplay loop muted playsinline>
+                
+                    <source src="videos/Giroux-Martone_Valérie_Devoir3.mp4.mp4" type="video/mp4">
+                
+                </video>
+                
+                <div class="conteneurDesPhotos fondu-en-bas">
+                    <div class="photo">
+                        <p>Montage video</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="contact">
+                <p>Site créé par Valérie Giroux-Martone</p>
+                <p>Email : girouxmartone@hotmail.com</p>
+
+            </footer>
+        </main>
+    </body>
+    <script src="js/index.js"></script>
+</html>
+
+

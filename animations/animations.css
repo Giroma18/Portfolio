@@ -1,0 +1,81 @@
+
+/* Animation CSS
+======================================================================= */
+
+/* Animation du titre et du sous-titre.
+===================================*/
+
+@keyframes arrivee-gauche {
+    from {
+        opacity: 0;
+        translate: -3000px;
+    }
+    
+    to {
+        translate: 0;
+        opacity: 1;
+      
+    }
+    }
+    
+@keyframes animation-titre {
+    from {
+        opacity: 0;
+        scale: 0.1;
+        translate: 0 -200vh;
+    }
+    
+    60% {
+        opacity: 1;
+        scale: 0.75;
+        translate: 0 0vh;
+        
+    }
+    
+    100% {
+        scale: 1;
+        translate: 0 0;
+    }
+}
+
+/* Animation pour faire tourner le logo dans l'axe des Z.
+=====================================================*/
+@keyframes animation-logo {
+    from {
+        transform: rotate3D(0);
+    }
+        
+        
+    100% {
+        transform: rotate3D(0,1,0,360deg);
+    }
+}
+        
+/* Animations pour le contenu principal des sections.
+=============================================== */
+@keyframes fondu-en-bas {
+	0% {
+		translate: 0 10vh;
+		opacity: 0;
+	}
+
+	100% {
+		translate: 0 0vh;
+		opacity: 1;
+	}
+}
+
+
+@keyframes flotter {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(-2deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
+    

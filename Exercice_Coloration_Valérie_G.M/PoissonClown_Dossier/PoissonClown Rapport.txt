@@ -1,0 +1,39 @@
+Rapport d'assemblage
+
+-----------------------------------------------------------------------------
+Document :
+Nom : PoissonClown.ai
+Mode : Couleurs RVB
+Profil colorimétrique : Sans
+Unité : millimètres
+Dimensions : 210 mm x 297 mm
+Afficher les images en mode Tracés : INACTIF
+Mettre en évidence les polices substituées : INACTIF
+Mettre en évidence les glyphes substitués : INACTIF
+Conserver le caractère modifiable du texte
+Simuler le papier couleur : INACTIF
+
+-----------------------------------------------------------------------------
+Objets en tons directs :
+
+-----------------------------------------------------------------------------
+Polices manquantes :SANS
+
+-----------------------------------------------------------------------------
+Polices protégées non assemblées :SANS
+
+-----------------------------------------------------------------------------
+Polices :
+SANS
+
+-----------------------------------------------------------------------------
+Polices incorporées :
+SANS
+
+-----------------------------------------------------------------------------
+Liens manquants :
+SANS
+
+-----------------------------------------------------------------------------
+Images liées :
+SANS
