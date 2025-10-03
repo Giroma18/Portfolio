@@ -280,10 +280,10 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 .conteneurDesPhotos {
 	/*Conteneur flex en rangé*/
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
-	padding: 4.5rem;
+	align-self: center;
+	padding: 3.5rem;
 	opacity: 0;
 }
 
@@ -355,17 +355,16 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 .publication {
 	border-radius: 20px;
 	background-color: #333;
-	padding: 30px;
+	padding: 100px 100px;
 	display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-    grid-template-rows: repeat(2, 200px);  /* 2 rangées de 200px de haut */
-	gap: 10px;
+    grid-template-rows: repeat(2, 300px);  /* 2 rangées de 200px de haut */
+	gap: 5px;
     width: 100%;
     max-width: 900px;
     height: 600px; /* Hauteur fixe pour toutes les galeries */
     overflow: hidden; /* ou auto, ou scroll */
     margin-bottom: 30px;
-    padding: 10px;
 	place-items: center;
 	justify-content: center;
     align-content: center;
