@@ -74,7 +74,7 @@ section:nth-child(even) {
 .barre-menu,
 .menu,
 footer {
-	background: #333;
+	background-color: #1c1c1c;
 	color: #ddd;
 }
 
@@ -106,7 +106,7 @@ header {
 	/*Le texte arrive vers la gauche au tout début*/
 	animation: arrivee-gauche 2s cubic-bezier(.14,.66,.34,.85);
 	animation-fill-mode: backwards;
-	padding: 5rem;
+	padding: 3rem;
 	color: white;
 	font-size: 20px;
 }
@@ -117,6 +117,8 @@ footer {
 	font-size: small;
 	font-style: italic;
 	text-align: center;
+	color: #ffffff;
+	/* background-image: url("../images/GrandeTaille/Ville.png"); */
 }
 
 /* Contrôle du menu et du bouton burger...
@@ -223,7 +225,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 #model3D {
 	height: 100vh; /* prend toute la hauteur de l'écran */
-    background-image: url('../images/GrandeTaille/Masque.jpg'); /* chemin de ton image */
     background-size: cover; /* couvre toute la section */
     background-position: center; /* centre l'image */
     background-repeat: no-repeat; /* ne pas répéter */
@@ -235,11 +236,12 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 #dessins {
 	height: 100vh; /* prend toute la hauteur de l'écran */
-    background-image: url('../images/GrandeTaille/tigre.png'); /* chemin de ton image */
     background-size: cover; /* couvre toute la section */
     background-position: center; /* centre l'image */
     background-repeat: no-repeat; /* ne pas répéter */
-    display: flex;
+	background-image: url("../images/GrandeTaille/tigre.png");
+    font-family: satisfy;
+	display: flex;
     align-items: center;
     justify-content: center;
 	z-index: 1;
@@ -276,6 +278,13 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
     margin: 0 auto; /* centre l'image horizontalement */
 }
 
+/* .organiMenu {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+} */
+
 
 .conteneurDesPhotos {
 	/*Conteneur flex en rangé*/
@@ -283,6 +292,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-self: center;
+	
 	padding: 3.5rem;
 	opacity: 0;
 }
@@ -295,19 +305,15 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 	font-size: 20px; /* taille du texte en pixels */
 	
-	
-
 	margin-top: 1.5rem;
-	background-color: rgb(74, 74, 74);
+	background-color: rgba(118, 118, 118, 0.413);
 	opacity: 0.5;
 	border-radius: 10px;
 
 	/*lèger ombrage autour des photos*/
-	-webkit-box-shadow: 1px 2px 20px 2px #252525;
-	box-shadow: 1px 2px 20px 2px #252525;
 	padding: 3.5rem;
 	transition: background-color 0.5s;
-	color: #ddd;
+	color: #efff11;
 	cursor: pointer;
 
 	transition: scale 1.5s, transform 1.5s;
@@ -353,18 +359,14 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 /*Section des publications*/
 .publication {
-	border-radius: 20px;
-	background-color: #333;
-	padding: 100px 100px;
-	display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-    grid-template-rows: repeat(2, 300px);  /* 2 rangées de 200px de haut */
-	gap: 5px;
-    width: 100%;
-    max-width: 900px;
+
+	display: flex;
+	flex-direction: column;
+	padding: 100px;
+
+	gap: 9px;
     height: 600px; /* Hauteur fixe pour toutes les galeries */
-    overflow: hidden; /* ou auto, ou scroll */
-    margin-bottom: 30px;
+
 	place-items: center;
 	justify-content: center;
     align-content: center;
@@ -375,8 +377,9 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 .titrePublication {
 	color: rgb(255, 255, 255);
 	font-size: 40px;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+	font-family: Rowdies;
+	align-self: center;
+	padding: 20px;
 }
 
 .publication img {
@@ -483,6 +486,13 @@ h1 {
 	.bouton-burger {
 		/*On cache le bouton burger*/
 		display: none;
+	}
+
+	.publication{
+		display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+        grid-template-rows: repeat(2, 300px);  /* 2 rangées de 200px de haut */
+		
 	}
 
    
