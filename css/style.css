@@ -147,9 +147,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	
 	
 	height: 10vh;
-	
-	-webkit-box-shadow: 0 9px 20px 12px #808080;
-	box-shadow: 9px 9px 20px 12px #808080;
 	/*
 	Conteneur flex en rangée avec alignement à droite pour
 	les petits périphériques. Et les items-flex sont centrés
@@ -239,7 +236,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
     background-size: cover; /* couvre toute la section */
     background-position: center; /* centre l'image */
     background-repeat: no-repeat; /* ne pas répéter */
-	background-image: url("../images/GrandeTaille/tigre.png");
+
     font-family: satisfy;
 	display: flex;
     align-items: center;
@@ -292,7 +289,8 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-self: center;
-	
+	background: linear-gradient(to bottom, rgb(53, 42, 50) 0%, transparent 100%);
+
 	padding: 3.5rem;
 	opacity: 0;
 }
@@ -362,10 +360,9 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 	display: flex;
 	flex-direction: column;
-	padding: 100px;
+	padding: 20px;
 
 	gap: 9px;
-    height: 600px; /* Hauteur fixe pour toutes les galeries */
 
 	place-items: center;
 	justify-content: center;
@@ -376,17 +373,16 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 .titrePublication {
 	color: rgb(255, 255, 255);
-	font-size: 40px;
+	font-size: 30px;
 	font-family: Rowdies;
+	font-weight: lighter;
 	align-self: center;
-	padding: 20px;
 }
 
 .publication img {
 	width: 100%;
 	height: 100%;
     object-fit: cover; /* coupe un peu si besoin, mais garde proportions */
-	aspect-ratio: 1 / 1;
 }
 
 
