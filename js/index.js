@@ -36,26 +36,13 @@ function controlerBoutonBurger() {
             }
 
 
-
-
-//Permettre d'agrandir une photo en cliquant dessus.
-
-
-let lesPhotos = document.querySelectorAll('.contenu section .photo');
-console.log("Sélecteur de tous les éléments PICTURE : ", lesPhotos);
-
-for (let unePhoto of lesPhotos) {
-    unePhoto.addEventListener('click', agrandirePhoto);
- }
-
-function agrandirePhoto(evt){
-    let unePhoto = evt.currentTarget;
-    unePhoto.classList.toggle('elargir-photo');
-}
-
-//Permettre d'afficher les photos lorsque l'on défile la page.
+//Permettre d'afficher les publication lorsque la page est loader
 
 window.addEventListener("scroll", gererAffichageContenuSections);
+
+
+// Appel initial pour afficher les sections visibles dès le chargement
+window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 
 		function gererAffichageContenuSections() {
 			let hauteurViewport = window.innerHeight;

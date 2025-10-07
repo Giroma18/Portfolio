@@ -62,8 +62,11 @@ section {
 	padding: 4.5rem;
 	color: #ffffff;
 	margin: 20px 10px;
-	
+}
 
+h3 {
+	color: gray;
+	align-self: flex-start;
 }
 
 section:nth-child(even) {
@@ -338,6 +341,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 .titre {
 	font-family: Rowdies;
+	font-weight: lighter;
 	padding-right: 1.5rem;
 	animation: animation-titre 2s;
 	animation-fill-mode: backwards;
@@ -376,7 +380,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	font-size: 30px;
 	font-family: Rowdies;
 	font-weight: lighter;
-	align-self: center;
+	align-self: flex-start;
 }
 
 .publication img {
@@ -384,6 +388,15 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	height: 100%;
     object-fit: cover; /* coupe un peu si besoin, mais garde proportions */
 }
+
+.video-responsive {
+  width: 100%;
+  height: auto;
+  max-width: 800px; /* tu peux limiter la taille max */
+  display: block;
+  margin: 0 auto; /* centrer */
+}
+
 
 
 /* Styles pour les écrans plus larges
@@ -484,12 +497,20 @@ h1 {
 		display: none;
 	}
 
-	.publication{
-		display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-        grid-template-rows: repeat(2, 300px);  /* 2 rangées de 200px de haut */
+	.publication {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		
 	}
 
+	.publication img {
+		width: 200px;     /* ou 100%, selon le conteneur */
+  		height: 200px;    /* fixe une hauteur */
+  		object-fit: cover;
+  		object-position: center;
+  		display: block;
+		
+	}
    
 }
