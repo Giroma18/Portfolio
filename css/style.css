@@ -75,6 +75,10 @@ h1 {
 	font-size: 2rem;
 }
 
+h4{
+	color: gray;
+}
+
 section:nth-child(even) {
 	/*Les couleurs sont inversées pour les sections paires*/
 	color: #42455a;
@@ -121,11 +125,14 @@ header {
 }
 
 footer {
-	height: 5vh;
-	padding: 4.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	gap: 50px;
+	height: 60vh;
 	font-size: small;
 	font-style: italic;
-	text-align: center;
 	color: #ffffff;
 }
 
