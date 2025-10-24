@@ -47,7 +47,7 @@ body {
 }
 
 main.contenu {
-	background-color: #ffffff;
+
 	flex-wrap: nowrap;
 
 	/*S'étire pour prendre toute la place en largeur*/
@@ -62,7 +62,7 @@ main.contenu {
 section {
 
 	color: #ffffff;
-	margin: 20px 10px;
+	margin: 50px 40px;
 }
 
 h3 {
@@ -87,8 +87,8 @@ section:nth-child(even) {
 .barre-menu,
 .menu,
 footer {
-	background-color: #1c1c1c;
-	color: #ddd;
+	background-color: #040435;
+	color: #e5ebff;
 }
 
 /*Style du menu
@@ -119,13 +119,14 @@ header {
 	/*Le texte arrive vers la gauche au tout début*/
 	animation: arrivee-gauche 2s cubic-bezier(.14,.66,.34,.85);
 	animation-fill-mode: backwards;
-	padding: 2rem;
+	padding: 0.5rem;
 	color: white;
 	font-size: 20px;
 }
 
 footer {
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
@@ -236,21 +237,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 =============================================*/
 
 
-
-.video-background{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  width: auto;
-  height: auto;
-  z-index: 0;
-}
-
-
 .Giroma {
 	width: 100px; /* ou un % */
 	height: auto; /* conserve les proportions */
@@ -260,29 +246,33 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 }
 
 .organiMenu {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 10px;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+  	grid-template-rows: repeat(2, 1fr);    /* 2 lignes égales */
+	gap: 5px;
 	justify-content: center;
 }
 
 
 .conteneurDesPhotos {
 	/*Conteneur flex en rangé*/
-	display: flex;
+	/* display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	align-self: center;
-	background: linear-gradient(to bottom, rgb(53, 42, 50) 0%, transparent 100%);
-
-	padding: 3.5rem;
+	align-self: center; */
 	opacity: 0;
+
+	display: grid;
+	grid-template-columns: repeat(3, 90px); /* 3 colonnes égales */
+	gap: 5px;
+	justify-content: center;
 }
 
 .boutonAccueil {
 	/* Les photos sont placés en rangés*/
 	display: flex;
+
 	align-items: center;
 	justify-content: center;
 
@@ -291,10 +281,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	background-color: rgba(118, 118, 118, 0.221);
 	border-radius: 8px;
 
-	min-width: 1rem;
-	height: 60px; /* uniformise la hauteur */
-
-	padding: 0.5rem;
 	transition: background-color 0.5s;
 	color: #efff11;
 	cursor: pointer;
@@ -307,7 +293,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	color: black;
 	opacity: 1;
 	transform: scale(10px);
-	transform: scale(1.2); /* augmente la taille de 20% */
+	transform: scale(1.01); /* augmente la taille de 20% */
 }
 
 .logo{
@@ -341,9 +327,10 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 /*Section des publications*/
 .publication {
 
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+	gap: 5px;
+	justify-content: center;
 
 	gap: 9px;
 
@@ -375,14 +362,14 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	align-self: flex-start;
 }
 
-.publication img {
+.conteneurDesPhotos img {
 	width: 100%;
 	height: 100%;
     object-fit: cover; /* coupe un peu si besoin, mais garde proportions */
 	transition: transform ease 0.5s;
 }
 
-.publication img:hover{
+.conteneurDesPhotos img:hover{
 	/* border: #efff11 solid 3px; */
 	transform: scale(1.1);
 }
@@ -457,6 +444,11 @@ h1 {
 	body {
 		display: flex;
 		flex-direction: column;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
 	}
 	
 	.logo{
@@ -540,6 +532,7 @@ h1 {
 	.boutonAccueil {
 
 	font-size: 1.5rem; /* taille du texte en pixels */
+	padding: 100px;
 
 	}
    
