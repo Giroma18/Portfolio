@@ -161,7 +161,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 .barre-menu {
 	
-	
+	position: fixed;
 	height: 10vh;
 	/*
 	Conteneur flex en rangée avec alignement à droite pour
@@ -171,10 +171,11 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	display: flex;
 	justify-content: end;
 	align-items: center;
+	z-index: 1;
 }
 
 .menu {
-	width: 50%;
+	width: 100%;
 	/*Position fixe sur petit écran en bas de la barre de la barre de menu*/
 	position: fixed;
 	top: 10vh;
@@ -235,25 +236,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 /* Mise en page pour les grilles photos
 =============================================*/
-
-
-.Giroma {
-	width: 100px; /* ou un % */
-	height: auto; /* conserve les proportions */
-	animation: flotter 3s ease-in-out infinite;
-    display: block;
-    margin: 0 auto; /* centre l'image horizontalement */
-}
-
-.organiMenu {
-
-	display: grid;
-	grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-  	grid-template-rows: repeat(2, 1fr);    /* 2 lignes égales */
-	gap: 5px;
-	justify-content: center;
-}
-
 
 .conteneurDesPhotos {
 	/*Conteneur flex en rangé*/
