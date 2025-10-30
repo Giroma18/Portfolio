@@ -5,13 +5,6 @@
     font-family: Rowdies;
     src: url(../fonts/Rowdies-Bold.ttf);
 }
-@font-face
-{
-    font-family: Satisfy;
-    src: url(../fonts/Satisfy-Regular.ttf);
-}
-
-
 
 /* Normalisation supplémentaire
 =============================================== */
@@ -29,16 +22,9 @@ html {
 	font-size: clamp(14px, 0.5rem + 1vw, 18px);
 }
 
-header {
-	font-family: Satisfy;
-	font-weight: lighter;
-}
-
 body {
 	width: 100%;
 	min-height: 100%;
-
-	color: #333;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 
 	/*Conteneur flex en colonne*/
@@ -50,8 +36,8 @@ main.contenu {
 
 	flex-wrap: nowrap;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,660d82+100 */
-background: linear-gradient(to bottom,  #000000 0%,#660d82 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
+	background: linear-gradient(to bottom,  #000000 0%,#230042 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	color: linear-gradient(to bottom,  #000000 0%,#fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	/*S'étire pour prendre toute la place en largeur*/
 	flex-grow: 1;
 
@@ -74,20 +60,43 @@ h3 {
 h1 {
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+31,ffffff+100&1+0,0+100 */
 	color: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.69) 31%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-	font-size: 6rem;
-	padding: 30px;
+	font-size: 2rem;
+	padding:60px;
 	font-family: Rowdies;
 }
 
 h4{
-	color: rgb(21, 0, 0);
+	color: rgb(255, 255, 255);
 	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.vertical-gradient-text {
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  -webkit-background-clip: text;      /* Nécessaire pour Safari et Chrome */
+  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour laisser apparaître le dégradé */
+  background-clip: text;         
+  opacity: 0;     /* Pour compatibilité étendue */
+
 }
 
-section:nth-child(even) {
-	/*Les couleurs sont inversées pour les sections paires*/
-	color: #42455a;
+
+.vertical-gradient-text-noir {
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 40%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  -webkit-background-clip: text;      /* Nécessaire pour Safari et Chrome */
+  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour laisser apparaître le dégradé */
+  background-clip: text;              /* Pour compatibilité étendue */
 }
 
 .barre-menu,
@@ -114,21 +123,6 @@ nav a:hover {
 	color: #252525;
 }
 
-
-header {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-
-	/*Le texte arrive vers la gauche au tout début*/
-	animation: arrivee-gauche 2s cubic-bezier(.14,.66,.34,.85);
-	animation-fill-mode: backwards;
-	padding: 0.5rem;
-	color: white;
-	font-size: 20px;
-}
 
 footer {
 	display: flex;
@@ -169,6 +163,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	
 	position: fixed;
 	height: 10vh;
+	width: 100%;
 	/*
 	Conteneur flex en rangée avec alignement à droite pour
 	les petits périphériques. Et les items-flex sont centrés
@@ -246,9 +241,11 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 .conteneurDesPhotos {
 	opacity: 0;
 	display: grid;
-	grid-template-columns: repeat(3, 90px); /* 3 colonnes égales */
-	gap: 5px;
+	grid-template-columns: repeat(2, 200px); /* 2 colonnes égales */
+	column-gap: 10px;
+	gap: 10px;
 	justify-content: center;
+	padding: 50px;
 }
 
 
@@ -263,16 +260,10 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 .titre {
 	font-family: Rowdies;
 	font-weight: lighter;
-	padding-right: 1.5rem;
+	font-size: 20px;
+	padding-right: 1rem;
 	animation: animation-titre 2s;
 	animation-fill-mode: backwards;
-}
-
-
-.titreAnnee {
-	font-size: 1.5rem;
-	display: flex;
-	justify-content: center;
 }
 
 /*Classe pour révéler les sections*/
@@ -280,18 +271,10 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	animation: fondu-en-bas 700ms cubic-bezier(.17, .67, .88, 1.46) forwards;
 }
 
-.titrePublication {
-	color: #efff11;
-	font-size: 30px;
-	font-family: Satisfy;
-	font-weight: lighter;
-	align-self: flex-start;
-}
-
 .conteneurDesPhotos img {
 	width: 100%;
 	height: 100%;
-    object-fit: cover; /* coupe un peu si besoin, mais garde proportions */
+    object-fit: contain; /* coupe un peu si besoin, mais garde proportions */
 	transition: transform ease 0.5s;
 }
 
@@ -307,6 +290,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
   max-width: 800px; /* tu peux limiter la taille max */
   display: block;
   margin: 0 auto; /* centrer */
+  opacity: 0;
 }
 
 
@@ -361,6 +345,19 @@ body {
 		display: flex;
 		flex-direction: column;
 	}
+
+	
+	.vertical-gradient-text {
+  	font-size: 3rem;
+ 	background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 0) 60%
+ 	 );
+  	-webkit-background-clip: text;      /* Nécessaire pour Safari et Chrome */
+  	-webkit-text-fill-color: transparent; /* Rend le texte transparent pour laisser apparaître le dégradé */
+  	background-clip: text;              /* Pour compatibilité étendue */
+}
 
 	footer {
 		display: flex;

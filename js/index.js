@@ -48,6 +48,8 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 			let hauteurViewport = window.innerHeight;
 
 			let lesContenusDesections = document.querySelectorAll(".conteneurDesPhotos");
+			let lesvideos = document.querySelectorAll(".video-responsive");
+			let lesTitres = document.querySelectorAll(".vertical-gradient-text");
 
 			for (let unContenu of lesContenusDesections) {
 				let positionHautDuContenu = unContenu.getBoundingClientRect().top;
@@ -57,6 +59,28 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 				}
 				else {
 					unContenu.classList.remove("active")
+				}
+				
+			}
+			for (let unevideo of lesvideos) {
+				let positionHautDeLaVideo = unevideo.getBoundingClientRect().top;
+
+				if(positionHautDeLaVideo < hauteurViewport * 0.5){
+					unevideo.classList.add("active")
+				}
+				else {
+					unevideo.classList.remove("active")
+				}
+				
+			}
+			for (let unTitre of lesTitres) {
+				let positionHautDuTitre = unTitre.getBoundingClientRect().top;
+
+				if(positionHautDuTitre < hauteurViewport * 0.5){
+					unTitre.classList.add("active")
+				}
+				else {
+					unTitre.classList.remove("active")
 				}
 				
 			}
