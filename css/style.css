@@ -86,19 +86,6 @@ h4{
 }
 
 
-.vertical-gradient-text-noir {
-  font-size: 2rem;
-  text-align: center;
-  background: linear-gradient(
-    to bottom,
-    rgb(0, 0, 0) 40%,
-    rgba(255, 255, 255, 0) 60%
-  );
-  -webkit-background-clip: text;      /* Nécessaire pour Safari et Chrome */
-  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour laisser apparaître le dégradé */
-  background-clip: text;              /* Pour compatibilité étendue */
-}
-
 .barre-menu,
 .menu,
 footer {
@@ -292,52 +279,20 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
   margin: 0 auto; /* centrer */
   opacity: 0;
 }
+.video-intro {
+  width: 100%;
+  height: auto;
+  max-width: 900px; /* tu peux limiter la taille max */
+  display: block;
+  margin: 0 auto; /* centrer */
+  background-color: #000000;
+  
+}
 
 
 
 /* Styles pour les écrans plus larges
 =============================================== */
-
-@media screen and (min-width: 768px) {
-
-body {
-	display: flex;
-	flex-direction: row-reverse;
-}
-
-.logo{
-	width: 120px;
-	height: 80px;
-	padding-top: 1.5rem;
-}
-
-.menu {
-	width: 100%;
-	position: static;
-	height: auto;
-	flex-direction: column;
-	translate: 0;
-}
-
-.menu a {
-	flex-grow: 1;
-}
-
-.barre-menu {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	height: auto;
-	width: 100vw;
-}
-
-.bouton-burger {
-	/*On cache le bouton burger*/
-	display: none;
-}
-
-
-}
 
 @media screen and (min-width: 991px) {
 
