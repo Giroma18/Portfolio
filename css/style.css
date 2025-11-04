@@ -125,6 +125,7 @@ footer {
 	font-size: small;
 	font-style: italic;
 	color: #ffffff;
+	text-decoration: none;
 }
 
 /* Contrôle du menu et du bouton burger...
@@ -240,8 +241,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 
 .logo{
-	width: 10px;
-	height: 10px;	
+	width: 5px;
 }
 
 .titre {
