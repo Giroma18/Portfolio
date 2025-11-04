@@ -95,3 +95,12 @@ const barreMenu = document.querySelector('.barre-menu');
       barreMenu.classList.remove('petit');
     }
   });
+
+  window.addEventListener("load", () => {
+  const transition = document.querySelector(".transition");
+
+  // On attend un peu pour être sûr que le DOM est prêt
+  setTimeout(() => {
+    transition.classList.add("next");
+  }, 90); // petit délai pour la fluidité
+});

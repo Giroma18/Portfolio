@@ -32,12 +32,15 @@ body {
 	flex-direction: column; 
 }
 
+header {
+	background-color: #000000;
+}
+
 main.contenu {
 
 	flex-wrap: nowrap;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,660d82+100 */
 	background: linear-gradient(to bottom,  #000000 0%,#230042 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	color: linear-gradient(to bottom,  #000000 0%,#fcfcfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	/*S'étire pour prendre toute la place en largeur*/
 	flex-grow: 1;
 
@@ -58,11 +61,10 @@ h3 {
 }
 
 h1 {
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+31,ffffff+100&1+0,0+100 */
-	color: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.69) 31%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	font-size: 2rem;
 	padding:60px;
 	font-family: Rowdies;
+	color: #ddd;
 }
 
 h4{
@@ -70,17 +72,18 @@ h4{
 	text-align: center;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+p{
+	color: rgb(255, 255, 255);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 .vertical-gradient-text {
   font-size: 2rem;
   text-align: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1) 40%,
-    rgba(255, 255, 255, 0) 60%
-  );
-  -webkit-background-clip: text;      /* Nécessaire pour Safari et Chrome */
-  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour laisser apparaître le dégradé */
-  background-clip: text;         
+  color: #ddd;
+  padding: 0;
   opacity: 0;     /* Pour compatibilité étendue */
 
 }
@@ -237,11 +240,8 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 
 .logo{
-	width: 80px;
-	height: 40px;
-	padding-right: 1.5rem;
-	animation: animation-logo 2s infinite;
-    animation-timing-function: linear;	
+	width: 10px;
+	height: 10px;	
 }
 
 .titre {
@@ -264,9 +264,11 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
     object-fit: contain; /* coupe un peu si besoin, mais garde proportions */
 	transition: transform ease 0.5s;
 }
+.publication {
+	transition: transform ease 0.5s;
+}
 
-.conteneurDesPhotos img:hover{
-	/* border: #efff11 solid 3px; */
+.publication:hover {
 	transform: scale(1.1);
 }
 
@@ -279,6 +281,13 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
   margin: 0 auto; /* centrer */
   opacity: 0;
 }
+.video-montage {
+  width: 100%;
+  height: auto;
+  max-width: 800px; /* tu peux limiter la taille max */
+  display: block;
+  margin: 0 auto; /* centrer */
+}
 .video-intro {
   width: 100%;
   height: auto;
@@ -287,6 +296,24 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
   margin: 0 auto; /* centrer */
   background-color: #000000;
   
+}
+
+
+/* --- Overlay de transition --- */
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  z-index: 9999;
+  animation: slideUp 0.8s ease forwards;
+}
+
+
+.transition.next {
+  animation: slideDown 0.8s ease forwards;
 }
 
 
@@ -304,13 +331,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	
 	.vertical-gradient-text {
   	font-size: 3rem;
- 	background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1) 40%,
-    rgba(255, 255, 255, 0) 60%
- 	 );
-  	-webkit-background-clip: text;      /* Nécessaire pour Safari et Chrome */
-  	-webkit-text-fill-color: transparent; /* Rend le texte transparent pour laisser apparaître le dégradé */
   	background-clip: text;              /* Pour compatibilité étendue */
 }
 
