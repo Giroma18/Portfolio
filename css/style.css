@@ -240,9 +240,12 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 }
 
 
-.logo{
-	width: 5px;
+.logo {
+    width: 30px;       /* largeur de l'image */
+    height: auto;      /* garde les proportions de l'image */
+	align-self: center;
 }
+
 
 .titre {
 	font-family: Rowdies;
@@ -337,11 +340,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	footer {
 		display: flex;
 		flex-direction: row;
-	}
-	
-	.logo{
-		width: 160px;
-		height: 120px;
 	}
 
 	.menu {
