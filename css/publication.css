@@ -69,6 +69,24 @@ h3 {
     padding: 20px;
 }
 
+.video-montage {
+  width: 100%;
+  height: auto;
+  max-width: 800px; 
+  display: block;
+  margin: 0 auto; /* centrer */
+}
+
+.video-intro {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto; /* centrer */
+  background-color: #000000;
+  
+}
+
 a {
   text-decoration: none;   /* enlève la ligne en dessous */
   color: rgb(255, 255, 255);              /* change la couleur du texte */

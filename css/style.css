@@ -276,7 +276,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 .video-responsive {
   width: 100%;
   height: auto;
-  max-width: 800px; /* tu peux limiter la taille max */
+  max-width: 800px; 
   display: block;
   margin: 0 auto; /* centrer */
   opacity: 0;
@@ -284,14 +284,14 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 .video-montage {
   width: 100%;
   height: auto;
-  max-width: 800px; /* tu peux limiter la taille max */
+  max-width: 800px; 
   display: block;
   margin: 0 auto; /* centrer */
 }
 .video-intro {
   width: 100%;
   height: auto;
-  max-width: 900px; /* tu peux limiter la taille max */
+  max-width: 900px;
   display: block;
   margin: 0 auto; /* centrer */
   background-color: #000000;
