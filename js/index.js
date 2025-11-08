@@ -54,7 +54,7 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 			for (let unContenu of lesContenusDesections) {
 				let positionHautDuContenu = unContenu.getBoundingClientRect().top;
 
-				if(positionHautDuContenu < hauteurViewport * 0.5){
+				if(positionHautDuContenu < hauteurViewport * 0.9){
 					unContenu.classList.add("active")
 				}
 				else {
@@ -65,7 +65,7 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 			for (let unevideo of lesvideos) {
 				let positionHautDeLaVideo = unevideo.getBoundingClientRect().top;
 
-				if(positionHautDeLaVideo < hauteurViewport * 0.5){
+				if(positionHautDeLaVideo < hauteurViewport * 0.9){
 					unevideo.classList.add("active")
 				}
 				else {
@@ -76,7 +76,7 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 			for (let unTitre of lesTitres) {
 				let positionHautDuTitre = unTitre.getBoundingClientRect().top;
 
-				if(positionHautDuTitre < hauteurViewport * 0.5){
+				if(positionHautDuTitre < hauteurViewport * 0.9){
 					unTitre.classList.add("active")
 				}
 				else {
@@ -96,11 +96,3 @@ const barreMenu = document.querySelector('.barre-menu');
     }
   });
 
-  window.addEventListener("load", () => {
-  const transition = document.querySelector(".transition");
-
-  // On attend un peu pour être sûr que le DOM est prêt
-  setTimeout(() => {
-    transition.classList.add("next");
-  }, 90); // petit délai pour la fluidité
-});

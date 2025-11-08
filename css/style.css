@@ -40,7 +40,7 @@ main.contenu {
 
 	flex-wrap: nowrap;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,660d82+100 */
-	background: linear-gradient(to bottom,  #000000 0%,#230042 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: linear-gradient(to bottom,  #000000 0%,#230042 100%);
 	/*S'étire pour prendre toute la place en largeur*/
 	flex-grow: 1;
 
@@ -51,9 +51,10 @@ main.contenu {
 
 section {
 
-	padding: 30px 40px;
+	color: #ddd;
 
 }
+
 
 h3 {
 	color: rgb(255, 255, 255);
@@ -76,6 +77,11 @@ h4{
 p{
 	color: rgb(255, 255, 255);
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
 }
 
 
@@ -121,7 +127,7 @@ footer {
 	justify-content: center;
 	align-content: center;
 	gap: 50px;
-	height: 60vh;
+	height: 40vh;
 	font-size: small;
 	font-style: italic;
 	color: #ffffff;
@@ -397,16 +403,25 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 	opacity: 0;
 	display: grid;
-	grid-template-columns: repeat(5, 220px); /* 3 colonnes égales */
-	justify-content: center;
-	align-self: center;
-
+	grid-template-columns: repeat(3, 220px); /* 3 colonnes égales */
 }
 
 .conteneurDesPhotos img {
 	width: 90%;
 	height: 90%;
 	object-fit: cover;
+}
+
+.section {
+	display: flex;
+	flex-direction: row;
+	padding: 100px;
+	gap: 20px;
+}
+.section:nth-child(even) {
+	/*Les couleurs sont inversées pour les sections paires*/
+	flex-direction: row-reverse;
+	align-content: flex-start;
 }
 
 
