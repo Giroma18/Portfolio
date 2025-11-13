@@ -40,7 +40,7 @@ main.contenu {
 
 	flex-wrap: nowrap;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,660d82+100 */
-	background: linear-gradient(to bottom,  #000000 0%,#230042 100%);
+	background: rgb(255, 255, 255);
 	/*S'étire pour prendre toute la place en largeur*/
 	flex-grow: 1;
 
@@ -50,37 +50,48 @@ main.contenu {
 }
 
 section {
+	padding: 100px;
+	color: #000000;
+	column-gap: 20px;
 
-	color: #ddd;
-
+}
+.section {
+	color: #000000;
+	border: #252525 solid 1px;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px;
+}
+.image {
+	width: 100%;
+	object-fit: cover;
 }
 
 
 h3 {
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	align-self: flex-start;
 }
 
 h1 {
 	font-size: 2rem;
-	padding:60px;
 	font-family: Rowdies;
-	color: #ddd;
+	color: #000000;
 }
 
 h4{
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	text-align: center;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 p{
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a{
-	color: rgb(255, 255, 255);
+	color: rgb(9, 0, 68);
 	text-decoration: none;
 }
 
@@ -88,16 +99,21 @@ a{
 .vertical-gradient-text {
   font-size: 2rem;
   text-align: center;
-  color: #ddd;
+  color: #000000;
   padding: 0;
   opacity: 0;     /* Pour compatibilité étendue */
+
+}
+.description {
+  font-size: 2rem;
+  background-color: #000000;
+  color: #ffffff;
 
 }
 
 
 .barre-menu,
-.menu,
-footer {
+.menu{
 	background-color: #000000;
 	color: #e5ebff;
 }
@@ -131,6 +147,7 @@ footer {
 	font-size: small;
 	font-style: italic;
 	color: #ffffff;
+	background-color: #303030;
 	text-decoration: none;
 }
 
@@ -159,7 +176,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 .barre-menu {
 	
 	position: fixed;
-	height: 10vh;
 	width: 100%;
 	/*
 	Conteneur flex en rangée avec alignement à droite pour
@@ -176,7 +192,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	width: 100%;
 	/*Position fixe sur petit écran en bas de la barre de la barre de menu*/
 	position: fixed;
-	top: 10vh;
+	top: 0;
 
 	/*Sa hauteur est celle de la hauteur du viewport MOINS celle de la barre de navigation*/
 	height: 90vh;
@@ -237,18 +253,15 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 .conteneurDesPhotos {
 	opacity: 0;
-	display: grid;
-	grid-template-columns: repeat(2, 200px); /* 2 colonnes égales */
-	column-gap: 10px;
-	gap: 10px;
-	justify-content: center;
-	padding: 50px;
+	
+}
+.logiciel {
+	display: flex;
+	flex-direction: row;
 }
 
-
 .logo {
-    width: 30px;       /* largeur de l'image */
-    height: auto;      /* garde les proportions de l'image */
+    width: 30px;
 	align-self: center;
 }
 
@@ -267,12 +280,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	animation: fondu-en-bas 700ms cubic-bezier(.17, .67, .88, 1.46) forwards;
 }
 
-.conteneurDesPhotos img {
-	width: 100%;
-	height: 100%;
-    object-fit: contain; /* coupe un peu si besoin, mais garde proportions */
-	transition: transform ease 0.5s;
-}
 .publication {
 	transition: transform ease 0.5s;
 }
@@ -281,14 +288,12 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	transform: scale(1.1);
 }
 
-
 .video-responsive {
-  width: 100%;
+  width: 90%;
   height: auto;
   max-width: 800px; 
   display: block;
   margin: 0 auto; /* centrer */
-  opacity: 0;
 }
 .video-montage {
   width: 100%;
@@ -308,25 +313,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 }
 
 
-/* --- Overlay de transition --- */
-.transition {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #111;
-  z-index: 9999;
-  animation: slideUp 0.8s ease forwards;
-}
-
-
-.transition.next {
-  animation: slideDown 0.8s ease forwards;
-}
-
-
-
 /* Styles pour les écrans plus larges
 =============================================== */
 
@@ -340,13 +326,9 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	
 	.vertical-gradient-text {
   	font-size: 3rem;
-  	background-clip: text;              /* Pour compatibilité étendue */
-}
-
-	footer {
-		display: flex;
-		flex-direction: row;
+  	background-clip: text;
 	}
+
 
 	.menu {
 		width: 100%;
@@ -398,32 +380,27 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	/*On cache le bouton burger*/
 	display: none;
 }
-   
-.conteneurDesPhotos {
 
-	opacity: 0;
-	display: grid;
-	grid-template-columns: repeat(3, 220px); /* 3 colonnes égales */
-}
-
-.conteneurDesPhotos img {
+.image {
 	width: 90%;
-	height: 90%;
 	object-fit: cover;
 }
-
 .section {
+	width: 500px;
+}
+.info {
+	margin: 10px;
+	align-content: center;
+}
+
+.conteneurDesPhotos {
 	display: flex;
 	flex-direction: row;
-	padding: 100px;
-	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+	opacity: 0;
+	
 }
-.section:nth-child(even) {
-	/*Les couleurs sont inversées pour les sections paires*/
-	flex-direction: row-reverse;
-	align-content: flex-start;
-}
-
-
 
 }

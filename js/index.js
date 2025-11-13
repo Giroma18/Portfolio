@@ -86,13 +86,4 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 			}
 		}
 
-const barreMenu = document.querySelector('.barre-menu');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      barreMenu.classList.add('petit');
-    } else {
-      barreMenu.classList.remove('petit');
-    }
-  });
 
