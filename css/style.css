@@ -182,10 +182,13 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	les petits périphériques. Et les items-flex sont centrés
 	sur l'axe secondaire.
 	*/
+	top: 0;
+    left: 0;
 	display: flex;
 	justify-content: end;
 	align-items: center;
-	z-index: 1;
+	z-index: 999;
+	transition: transform 0.3s ease;
 }
 
 .menu {
@@ -274,6 +277,12 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	animation: animation-titre 2s;
 	animation-fill-mode: backwards;
 }
+.reseaux {
+	gap: 30px;
+	align-self: center;
+	display: flex;
+	justify-content: center;
+}
 
 /*Classe pour révéler les sections*/
 .active.fondu-en-bas {
@@ -335,15 +344,10 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 		height: auto;
 		flex-direction: column;
 		translate: 0;
-	}
-
-	nav {
-
-		position: sticky;
+		transition: transform 0.3s ease;
 	}
 
 	.annee  {
-		position: static;
 		height: auto;
 		display: flex;
 		flex-direction: row;
@@ -353,14 +357,6 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	.menu a {
 		flex-grow: 1;
 	}
-
-.barre-menu {
-  position: sticky;
-  top: 0;
-  color: white;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
 
 .barre-menu.petit {
   padding: 1px 10px;
