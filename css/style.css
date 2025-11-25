@@ -43,18 +43,20 @@ main.contenu {
 	background: rgb(255, 255, 255);
 	/*S'étire pour prendre toute la place en largeur*/
 	flex-grow: 1;
-
+	margin-top: 6rem;
 	/*Conteneur flex en colonne*/
 	display: flex;
 	flex-direction: column;
 }
 
 section {
+	margin-top: 6rem;
 	color: #000000;
 	column-gap: 20px;
 
 }
 .section {
+	margin-top: 6rem;
 	color: #000000;
 	border: #252525 solid 1px;
 	border-radius: 20px;
@@ -91,8 +93,13 @@ p{
 }
 
 a{
-	color: rgb(9, 0, 68);
+	color: rgb(34, 0, 255);
+	
 	text-decoration: none;
+	transition: all 0.5s;
+}
+a:hover{
+	color: rgb(8, 0, 59);
 }
 
 .info {
