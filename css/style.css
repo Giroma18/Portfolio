@@ -30,6 +30,10 @@ body {
 	/*Conteneur flex en colonne*/
 	display: flex;
 	flex-direction: column; 
+
+	 margin: 0;
+  	background-repeat: no-repeat;
+  	image-rendering: pixelated;
 }
 
 header {
@@ -69,6 +73,42 @@ section {
     border-radius: 8px;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.galerie {
+  cursor: grab;
+  user-select: none; /* empêche la sélection de texte quand on glisse */
+
+
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.galerie.dragging {
+    cursor: grabbing;
+}
+
+.galerie img {
+  width: 300px;
+  margin-right: 10px;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.sectionCarrousel {
+  width: 80%;
+  margin: 0 auto;
+
+  margin-top: 100px;
+  
+
+}
 
 h3 {
 	color: rgb(0, 0, 0);
@@ -90,6 +130,8 @@ h4{
 p{
 	color: rgb(0, 0, 0);
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	line-height: 1.8;
+	margin: 1rem;
 }
 
 a{
@@ -107,6 +149,12 @@ a:hover{
 	align-content: center;
 	background-color: #cfcfcf;
 	border-radius: 8px;
+}
+
+.textIntro {
+	margin: 50px;
+	align-content: center;
+
 }
 
 .vertical-gradient-text {
@@ -275,6 +323,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	margin-top: 40px;
 	gap: 10px;
 }
 

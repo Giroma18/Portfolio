@@ -115,4 +115,49 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // éviter les valeurs négatives
         }
 
+function enableDragScroll(slider) {
+    let isDragging = false;
+    let startX = 0;
+    let startScroll = 0;
+
+    slider.addEventListener("pointerdown", (e) => {
+        // Empêcher le drag quand on clique sur un bouton dans le slider
+        if (e.target.closest("button")) return;
+
+        isDragging = true;
+        slider.setPointerCapture(e.pointerId);
+        slider.classList.add("dragging");
+
+        startX = e.clientX;
+        startScroll = slider.scrollLeft;
+    });
+
+    slider.addEventListener("pointermove", (e) => {
+        if (!isDragging) return;
+
+        const dx = e.clientX - startX;
+        slider.scrollLeft = startScroll - dx;
+    });
+
+    slider.addEventListener("pointerup", () => {
+        isDragging = false;
+        slider.classList.remove("dragging");
+    });
+}
+
+document.querySelectorAll(".galerie").forEach(enableDragScroll);
+
+function createSlider(prevBtn, nextBtn, sliderId) {
+  const slider = document.getElementById(sliderId);
+  document.querySelector(prevBtn).onclick = () => slider.scrollLeft -= 320;
+  document.querySelector(nextBtn).onclick = () => slider.scrollLeft += 320;
+}
+
+createSlider(".prev1", ".next1", "slider1");
+createSlider(".prev2", ".next2", "slider2");
+
+
+
+
+
 
