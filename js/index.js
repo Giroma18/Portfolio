@@ -156,6 +156,16 @@ function createSlider(prevBtn, nextBtn, sliderId) {
 createSlider(".prev1", ".next1", "slider1");
 createSlider(".prev2", ".next2", "slider2");
 
+// Parallax
+
+window.addEventListener("scroll", function () {
+  document.querySelectorAll(".parallax").forEach(el => {
+    const speed = el.getAttribute("data-speed");
+    const y = window.scrollY * speed;
+    el.style.backgroundPosition = `center ${y}px`;
+  });
+});
+
 
 
 

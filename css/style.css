@@ -34,17 +34,29 @@ body {
 	 margin: 0;
   	background-repeat: no-repeat;
   	image-rendering: pixelated;
+	background-color: #000000;
 }
 
 header {
 	background-color: #000000;
 }
 
+.parallax {
+  background-image:  linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url('../images/Ville.jpg');
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.relative {
+	position : relative;
+}
+
 main.contenu {
 
 	flex-wrap: nowrap;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,660d82+100 */
-	background: rgb(255, 255, 255);
+	background: rgb(0, 0, 0);
 	/*S'étire pour prendre toute la place en largeur*/
 	flex-grow: 1;
 	margin-top: 6rem;
@@ -61,12 +73,18 @@ section {
 }
 .section {
 	margin-top: 6rem;
-	color: #000000;
-	border: #252525 solid 1px;
+	color: #ffffff;
 	border-radius: 20px;
 	margin: 1.5rem;
+	transition : border 0.5s;
 
 }
+
+.section:hover {
+	border:yellow solid 2px;
+
+}
+
 .image {
     width: 90%;
     object-fit: cover;
@@ -158,9 +176,53 @@ a:hover{
 }
 
 .textIntro {
+	position: absolute;
 	margin: 50px;
 	align-content: center;
+	top: -300px;
+	background-color: #cfcfcf;
+	border: yellow solid 5px;
 
+}
+
+.textIntro:before {
+	content:"";
+	border: black solid 2px;
+	width : 1130px;
+	height: 350px;
+	position : absolute;
+	left: 10px;
+	top: 10px;
+}
+
+
+.segment {
+  width: 20px;
+  height: 20px;
+  background: black;
+  position: absolute;
+  animation: moveSnake 4s linear infinite;
+}
+
+.segment2 {
+  width: 20px;
+  height: 20px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  animation: moveSnake 4s linear infinite;
+}
+
+.delay1 { animation-delay: 0.2s; }
+.delay2 { animation-delay: 0.4s; }
+.delay4 { animation-delay: 0.8s; }
+.delay5 { animation-delay: 0.10s; }
+
+@keyframes moveSnake {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(180px, 0); }
+  50%  { transform: translate(180px, 180px); }
+  75%  { transform: translate(0, 180px); opacity: 0; }
+  100% { transform: translate(0, 0); opacity: 0; }
 }
 
 .vertical-gradient-text {
@@ -456,7 +518,8 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 }
 
 .image {
-    width: 90%;
+    width: 100vw;
+	
     object-fit: cover;
     border-radius: 8px;
 }
