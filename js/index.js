@@ -102,8 +102,8 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 	    if(currentScroll > lastScrollTop) {
 		    // On scroll vers le bas et cache le header
             // En rajouter au header un style qui est le translate 
-            header.style.transform = 'translateY(-100%)';
-            headerMobile.style.transform = 'translateY(-100%)';
+            header.style.transform = 'translateY(-150%)';
+            headerMobile.style.transform = 'translateY(-150%)';
             console.log("scroll")
 	    }
 	    else{

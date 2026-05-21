@@ -178,36 +178,35 @@ a:hover{
 .textIntro {
 	position: absolute;
 	margin: 50px;
-	align-content: center;
 	top: -300px;
 	background-color: #cfcfcf;
 	border: yellow solid 5px;
-
 }
 
 .textIntro:before {
-	content:"";
+	content: "";
 	border: black solid 2px;
-	width : 1130px;
-	height: 350px;
-	position : absolute;
-	left: 10px;
-	top: 10px;
+	width: 97%;
+	height: 97%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 
 .segment {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 5px;
   background: black;
   position: absolute;
   animation: moveSnake 4s linear infinite;
 }
 
 .segment2 {
-  width: 20px;
-  height: 20px;
-  background: rgb(255, 255, 255);
+  width: 10px;
+  height: 5px;
+  background: yellow;
   position: absolute;
   animation: moveSnake 4s linear infinite;
 }
@@ -219,8 +218,8 @@ a:hover{
 
 @keyframes moveSnake {
   0%   { transform: translate(0, 0); }
-  25%  { transform: translate(180px, 0); }
-  50%  { transform: translate(180px, 180px); }
+  25%  { transform: translate(10%, 0);opacity: 0; }
+  50%  { transform: translate(10%, 500px);opacity: 0; }
   75%  { transform: translate(0, 180px); opacity: 0; }
   100% { transform: translate(0, 0); opacity: 0; }
 }
@@ -254,14 +253,12 @@ nav .annee a {
 	padding: 0.5rem 1rem;
 	margin-bottom: 0.2rem;
 	text-decoration: none;
-	background-color: rgba(255, 255, 255, 0.1);
 	color: #ddd;
 	text-align: center;
 }
 
 nav a:hover {
-	background: #efff11;
-	color: #252525;
+	color: #efff11;
 }
 
 
@@ -305,7 +302,7 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 .barre-menu {
 	
 	position: fixed;
-	width: 100%;
+	width: 90%;
 	/*
 	Conteneur flex en rangée avec alignement à droite pour
 	les petits périphériques. Et les items-flex sont centrés
@@ -314,10 +311,14 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	top: 0;
     left: 0;
 	display: flex;
-	justify-content: end;
+	justify-content: space-between;
 	align-items: center;
 	z-index: 999;
 	transition: transform 0.3s ease;
+	border-radius: 30px;
+	margin: 30px 30px auto;
+	background-color: #303030;
+	opacity: 0.8;
 }
 
 .menu {
@@ -325,59 +326,80 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 	/*Position fixe sur petit écran en bas de la barre de la barre de menu*/
 	position: fixed;
 	top: 0;
-
+	margin-top: 60px;
 	/*Sa hauteur est celle de la hauteur du viewport MOINS celle de la barre de navigation*/
-	height: 90vh;
+	height: 20vh;
 	/*Conteneur flex en colonne avec élément centré au milieu*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	/*Au démarrage on met le menu complètement à gauche*/
-	translate: 100%;
-
+	translate: 120%;
+	background-color: #303030;
 	/*Mettre le menu par-dessus tout*/
 	z-index: 999;
-
 	/*Effet de transition*/
-	transition: translate 500ms;
+	transition: all 500ms;
+	border-radius: 30px;
 }
 
 .bouton-burger {
-	display: block;
-	height: 2rem;
+	position: relative;
 	width: 2rem;
+	height: 2rem;
 	margin: 0.5rem;
-	background: linear-gradient(
-		to bottom,
-		#ddd 0%,
-		#ddd 20%,
-		transparent 20%,
-		transparent 40%,
-		#ddd 40%,
-		#ddd 60%,
-		transparent 60%,
-		transparent 80%,
-		#ddd 80%,
-		#ddd 100%
-	);
 	cursor: pointer;
-	transition: rotate 400ms;
+	margin-right:20px;
 }
 
-.bouton-burger:hover  {
-	background: linear-gradient(
-		to bottom,
-		#efff11 0%,
-		#efff11 20%,
-		transparent 20%,
-		transparent 40%,
-		#efff11 40%,
-		#efff11 60%,
-		transparent 60%,
-		transparent 80%,
-		#efff11 80%,
-		#efff11 100%
-	);
+.bouton-burger span,
+.bouton-burger::before,
+.bouton-burger::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #ddd;
+	border-radius: 2px;
+	transition: all 0.3s ease;
+}
+
+/* ligne du milieu */
+.bouton-burger span {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* ligne du haut */
+.bouton-burger::before {
+	top: 5px;
+}
+
+/* ligne du bas */
+.bouton-burger::after {
+	bottom: 5px;
+}
+
+/* animation en X */
+.bouton-burger.active span {
+	opacity: 0;
+}
+
+.bouton-burger.active::before {
+	top: 50%;
+	transform: rotate(45deg);
+}
+
+.bouton-burger.active::after {
+	bottom: 50%;
+	transform: rotate(-45deg);
+}
+
+.bouton-burger:hover::before,
+.bouton-burger:hover::after,
+.bouton-burger:hover span {
+	background: yellow;
 }
 
 /* Mise en page pour les grilles photos
@@ -471,14 +493,43 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
   	background-clip: text;
 	}
 
+	.barre-menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		/*
+		Conteneur flex en rangée avec alignement à droite pour
+		les petits périphériques. Et les items-flex sont centrés
+		sur l'axe secondaire.
+		*/
+		top: 0;
+		left: 0;
+		margin: 30px 30px auto;
+	}
+
+	.barre-menu h1 {
+		margin-bottom: 50px;
+	}
+
 
 	.menu {
-		width: 100%;
 		height: auto;
-		flex-direction: column;
 		translate: 0;
 		transition: transform 0.3s ease;
 	}
+
+	.textIntro {
+	position: absolute;
+	margin: 100px;
+	top: -300px;
+	}
+
+	.textIntro:before {
+		width: 99%;
+		height: 96%;
+	}
+
 
 	.annee  {
 		height: auto;
