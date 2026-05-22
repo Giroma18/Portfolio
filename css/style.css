@@ -168,12 +168,6 @@ a:hover{
 	color: rgb(8, 0, 59);
 }
 
-.info {
-	margin: 10px;
-	align-content: center;
-	background-color: #cfcfcf;
-	border-radius: 8px;
-}
 
 .textIntro {
 	position: absolute;
@@ -404,6 +398,65 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
 /* Mise en page pour les grilles photos
 =============================================*/
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.item {
+  position: relative;
+}
+
+.item img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Description flottante */
+.info {
+  position: absolute;
+
+  top: 100%;   /* juste sous l'image */
+  left: 0;
+
+  width: 100%;
+
+  background: white;
+  padding: 15px;
+
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  transform: translateY(-10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+/* Hover */
+
+.item:hover .info {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 1px 1px 1px 1px #E4FF33;
+}
+
+.item img {
+  transition: transform 0.4s ease;
+}
+
+.item:hover img {
+  transform: scale(1.05);
+}
 
 .conteneurDesPhotos {
 	opacity: 0;
