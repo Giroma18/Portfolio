@@ -13,52 +13,51 @@
     </head>
 
     <body>
-        <input type="checkbox" id="cc-pour-bouton-burger" />
- 
-        <div class="barre-menu"> 
-             <h1 style="color:white;">Design graphique | Valérie Giroux </h1>       
-            <!-- Bouton burger-->
-            <label for="cc-pour-bouton-burger" class="bouton-burger"><span></span></label>
-          
-            <nav class="menu">
-                  <div class="annee">
-                    <a href="#accueil">Accueil</a>
-                    <a href="#propos">À propos</a>
-                    <a href="#gallerie">Portfolio</a>
-                    <a href="#Competence">Compétences</a>
-                    <a href="#Experience">Expérience</a>
-                    <a href="#contact">Contact</a>  
-                </div>
-            </nav>
-        </div>
+        <nav class="mobile-nav">
+
+        <a href="#home">
+            <i class="fa-solid fa-house"></i>
+            <span>Accueil</span>
+        </a>
+
+        <a href="#projects">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Projets</span>
+        </a>
+
+        <a href="#about">
+            <i class="fa-solid fa-user"></i>
+            <span>À propos</span>
+        </a>
+
+        <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+
+        </nav>
+
+
         <div class="parallax" data-speed="0.5">
-
+            <section class="relative">
+                <div class="liquid"></div>
+                <div class="textIntro">
             
+                    <h1 style="color:aliceblue">Valérie Giroux</h1>
+                    <h2>Finissante en Technique d'intégration multimédia</h2>
+                    <p style="color: aliceblue;">
+                        Mes valeurs fondamentales sont l’honnêteté, la ponctualité et l’ouverture d’esprit. Passionnée par le design, la modélisation 3D et le web, 
+                        j’aime transformer des idées en concepts visuels alliant esthétique et fonctionnalité. 
+                        Créative, curieuse et à l’écoute, j’apprécie le travail en équipe et la recherche de solutions collectives.
+                    </p>
+                </div>
+            </section>         
         </div>
-        <header>
-            
-        </header>
-        <section class="relative">
-            <div class="textIntro">
-           
-                <h1>À propos</h1>
-                <h2>Finissante en Technique d'intégration multimédia</h2>
-                <p>
-                    Mes valeurs fondamentales sont l’honnêteté, la ponctualité et l’ouverture d’esprit. Ces principes guident ma façon de travailler et d’aborder chaque projet.
 
-                    Passionnée par le design, la modélisation 3D et le web, j’ai eu l’occasion de participer à des projets variés qui m’ont permis d’explorer différentes approches créatives et techniques. J’aime particulièrement transformer une idée en concept visuel concret, en alliant esthétique, fonctionnalité et cohérence.
-
-                    Le travail en équipe occupe une place importante dans mon parcours : j’apprécie échanger, partager des idées et faire émerger des solutions collectives. On me décrit souvent comme une personne créative, curieuse et à l’écoute, capable de proposer des idées constructives tout en m’adaptant à celles des autres.
-
-                </p>
-            </div>
-        </section>
-
-        <main class="contenu">
-
-            <section id="gallerie">
-                    <h1 class="fondu-en-bas" style="color: white; margin-top: 300px;">Gallerie</h1>
-                <div class="grille">
+        <section id="gallerie">
+                <h1 class="fondu-en-bas" style="color: white;">Gallerie</h1>
+                
+            <div class="grille">
                     <div class="item fondu-en-bas">
                      
                          <a href="./images/GrandeTaille/Casque.png"><img  class="image" src="./images/GrandeTaille/Casque.png" alt="Photo"></a>
@@ -69,8 +68,8 @@
                                 </p>
                                 
                             <div class="logiciel">
-                                 <p><b>Logiciels</b></p>      
-                                <p>Maya - Photoshop
+                                 <p><b>Logiciels :</b>     
+                                Maya - Photoshop
                                 </p>
                             </div>
                         </div>
@@ -87,8 +86,9 @@
                             </p>
 
                             <div class="logiciel"> 
-                                <p><b>Logiciels</b></p>
+                                <p><b>Logiciels :</b>
                                 Maya - 3D Painter
+                                </p>
                               
                             </div>
                         </div>
@@ -105,8 +105,9 @@
                                 </p>
                                
                                     <div class="logiciel">
-                                        <p><b>Logiciels</b></p>
+                                        <p><b>Logiciels :</b>
                                         Maya - 3D Painter
+                                        </p>
                                     </div>
                             </div>
                     </div>
@@ -122,8 +123,9 @@
                             </p>
 
                             <div class="logiciel">
-                                <p><b>Logiciels</b></p>
+                                <p><b>Logiciels :</b>
                                 Maya - 3D Painter
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -142,180 +144,13 @@
                             </p>     
 
                             <div class="logiciel">
-                                <p><b>Logiciels</b></p>  
+                                <p><b>Logiciels</b> 
                                 Blender - Grease Pencil
+                                </p> 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="conteneurDesPhotos fondu-en-bas">
-                    <div class="section fondu-en-bas">
-                            
-                            <video autoplay loop muted playsinline  class="video-responsive">
-                                <source  src="./videos/ConnectFour.mp4" type="video/mp4">
-                                Votre navigateur ne supporte pas la vidéo HTML5.
-                            </video>
-                        
-                        <div class="info">
-                            <h4>Prototype Puissance 4 Multijoueur</h4>
-                            <h4><a href="https://youtu.be/hQWLcViOH_k">https://youtu.be/hQWLcViOH_k</a></h4>
-                            <p> 
-                                J’ai développé un prototype de Puissance 4 multijoueur pour 3 joueurs sous Unity, intégrant une connexion en ligne via Unity Relay. Le projet a été conçu et testé en format mobile grâce à la simulation mobile d’Unity, permettant d’optimiser l’interface et l’expérience utilisateur sur smartphone.
-                            </p> 
-                    
-                            <div class="logiciel"> 
-                                <p><b>Logiciels :</b></p> 
-                                <img class="logo" src="images/Logo/logoUnity.png" alt="logo">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section fondu-en-bas">
-                            
-                            <video autoplay loop muted playsinline  class="video-responsive">
-                                <source  src="./videos/VideoPromotionnelleOmbre.mp4" type="video/mp4">
-                                Votre navigateur ne supporte pas la vidéo HTML5.
-                            </video>
-                        
-                        <div class="info">
-                            <h4>L'Ombre</h4>
-                            <h4><a href="https://youtu.be/N9P01a59hgA">https://youtu.be/N9P01a59hgA</a></h4>
-                            <p> 
-                                L’Ombre est un jeu de plateforme 3D d’horreur dans lequel vous incarnez R.E.D, 
-                                un petit robot de maintenance envoyé en mission de dernier recours. À bord d’un vaisseau scientifique abandonné, 
-                                la recherche a mal tourné et quelque chose de sombre rôde désormais dans les couloirs. 
-                                Votre objectif : sauver ce qu’il reste de l’expérience et survivre à ce qui s’y cache.
-                                Le projet à été réalisé en équipe avec Peterson Germain et Laura Visentin.
-                            </p> 
-                    
-                            <div class="logiciel"> 
-                                <p><b>Logiciels :</b></p> 
-                                <img class="logo" src="images/Logo/logoUnity.png" alt="logo">
-                                <img class="logo" src="images/Logo/Maya.png" alt="logo">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section fondu-en-bas">
-                            
-                            <video autoplay loop muted playsinline  class="video-responsive">
-                                <source  src="./videos/miniatureVideoJS.mp4" type="video/mp4">
-                                Votre navigateur ne supporte pas la vidéo HTML5.
-                            </video>
-                        
-                        <div class="info">
-                            <h4>Prototype d'une simulation de fastfood</h4>
-                            <h4><a href="https://youtu.be/AlptUCjWEkE">https://youtu.be/AlptUCjWEkE</a></h4>
-                            <p> 
-                                J’ai réalisé un prototype de simulation de fast-food développé sous Unity, pour lequel je me suis principalement occupé de la programmation des mécaniques et du comportement du jeu. Les éléments visuels et modèles 3D proviennent de l’Asset Store Unity, intégrés et adaptés pour créer une expérience cohérente et fonctionnelle.
-                            </p> 
-                    
-                            <div class="logiciel"> 
-                                <p><b>Logiciels :</b></p> 
-                                <img class="logo" src="images/Logo/logoUnity.png" alt="logo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            <!-- <section id="siteWeb" >
-                    <h1 class="vertical-gradient-text fondu-en-bas">Sites Webs</h1>
-                <div class="conteneurDesPhotos fondu-en-bas">
-                    <div class="section fondu-en-bas">
-                      
-                            <img class="image" src="./images/GrandeTaille/AgenceVoyage.png" alt="Photoweb">
-                        <div class="info">
-                            <h4>Agence de Voyage</h4>
-                            <h4><a href="https://gftnth00.mywhc.ca/4w4_27/">https://gftnth00.mywhc.ca/4w4_27/</a></h4>
-                            <p> 
-                                Dans le cadre de ce projet, j’ai conçu et développé un site web complet sous WordPress, tout en intégrant des fonctionnalités avancées grâce à 
-                                l’utilisation de HTML/CSS, SASS, JavaScript et PHP.
-                                J’ai également créé des templates personnalisés en PHP pour répondre aux besoins spécifiques du projet, tout en veillant à respecter les bonnes pratiques d’architecture d’un thème WordPress. L’intégration front-end a été réalisée en HTML/CSS, 
-                                avec une organisation optimisée grâce à SASS pour améliorer la maintenabilité et la cohérence du code.
-                            </p>
-                             
-                        <div class="logiciel">
-                            <p><b>Date :</b>2024</p>  
-                            <p>HTML/CSS/PHP/javascript</p>
-                            <p>Wordpress</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section fondu-en-bas">
-              
-                     <img class="image" src="./images/GrandeTaille/JeuPendu.png" alt="Photoweb">
-                    <div class="info">
-                        <h4>Le jeu du pendu</h4>
-                        <h4><a href="https://giroma18.github.io/Jeu_Du_Pendu/">https://giroma18.github.io/Jeu_Du_Pendu/</a></h4>
-                        <p> J’ai développé un jeu du pendu principalement en JavaScript, avec une structure en HTML/CSS.
-                            Le projet comprend la logique du jeu (sélection des mots, gestion des lettres, détection des erreurs, conditions de victoire/défaite) ainsi que l’interaction avec le DOM pour afficher l’état du pendu et les lettres trouvées.
-                            Ce projet m’a permis de renforcer mes compétences en JavaScript et en création d’interfaces interactives.    
-                        </p>
-
-                        <div class="logiciel"> 
-                            <p><b>Date :</b>2024</p> 
-                            <p>HTML/CSS/javascript</p>
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="section fondu-en-bas">
-                    
-                     <img class="image" src="./images/GrandeTaille/ProjetFinissant.png" alt="Photoweb">
-                    <div class="info">
-                        <h4>Projet finissants</h4>
-                        <h4><a href="https://giroma18.github.io/ProjetPhoto/">https://giroma18.github.io/ProjetPhoto/</a></h4>
-                        <p>
-                           Dans le cadre d’un exercice réalisé en classe, je me suis chargé de créer l’ensemble du site web en HTML/CSS et JavaScript.
-                           J’ai intégré les visuels fournis (photos non personnelles) et développé la mise en page ainsi que les animations et interactions JavaScript pour rendre le site dynamique et agréable à utiliser.
-                           Ce projet m’a permis de renforcer mes compétences en intégration web et en animation front-end.
-
-                        </p>
-
-                        <div class="logiciel">
-                            <p><b>Date :</b>2024</p>   
-                            <p>HTML/CSS/Javascript</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </section> -->
-
-                    <h1 class="vertical-gradient-text fondu-en-bas" >Affiches</h1>
-
-
-  
-
-                
-                <div class="sectionCarrousel fondu-en-bas">
-                    <div class="container">
-
-                        <button class="prev prev2">◀</button>
-                        <div class="galerie" id="slider2">
-                            
-                            <a href="./images/GrandeTaille/Affiches/Toucan3.png"> <img class="image" src="./images/GrandeTaille/Affiches/Toucan3.png" alt="Toucan"></a>
-                            <a href="./images/GrandeTaille/Affiches/toucan2.png"> <img class="image" src="./images/GrandeTaille/Affiches/toucan2.png" alt="Toucan"></a>
-                            <a href="./images/GrandeTaille/Affiches/Toucan1.png"> <img class="image" src="./images/GrandeTaille/Affiches/Toucan1.png" alt="Toucan"></a>
-                            <a href="./images/GrandeTaille/Affiches/koi.png"> <img class="image" src="./images/GrandeTaille/Affiches/koi.png" alt="Toucan"></a>
-                            <a href="./images/GrandeTaille/Affiches/crabe.png"> <img class="image" src="./images/GrandeTaille/Affiches/crabe.png" alt="Toucan"></a>
-                            <a href="./images/GrandeTaille/Affiches/clown.png"> <img class="image" src="./images/GrandeTaille/Affiches/clown.png" alt="Toucan"></a>
-                        </div>
-                        <button class="next next2">▶</button>
-                    </div>
-
-                    <div class="info">
-                        <h4>Illustrations d'animaux</h4>
-                        <p>
-                           Réalisation d’une série d’affiches sur Adobe Illustrator, représentant des toucans et un crabe. Les illustrations ont été créées à partir de photos de référence, en utilisant principalement l’outil Plume pour construire des formes précises et stylisées.
-                        </p>
-
-                        
-                        <div class="logiciel">
-                            <p><b>Logiciels :</b></p> 
-                            <img class="logo" src="images/Logo/illustrator.png" alt="logo">
-                        </div>
-                    </div>
-                </div>
-                    
  
                  <div class="conteneurDesPhotos fondu-en-bas">
                 <div class="section fondu-en-bas">
@@ -358,26 +193,6 @@
                         </div>
                     </div>
                 </div> -->
-
-                <div class="section fondu-en-bas">
-                   
-                    <video autoplay loop muted playsinline  class="video-responsive" controls>
-                        <source  src="./videos/tele-Quebec.mp4" type="video/mp4">
-                    </video>   
-                    <div class="info">
-                        <h4>Télé-Québec</h4>
-                        <h4><a href=""></a></h4>
-                        <p> 
-                            Réalisation d’une vidéo promotionnelle fictive pour Télé-Québec, mettant en avant la thématique des films de science-fiction. Le montage a été réalisé avec Premiere Pro, en intégrant des effets visuels et une mise en scène dynamique pour capter l’attention et transmettre l’ambiance futuriste des films.
-                        </p>
-
-                        <div class="logiciel">
-                            <p><b>Logiciels :</b></p> 
-                            <img class="logo" src="./images/Logo/premier.png" alt="logo">
-                        </div>
-                    </div>
-
-                </div>
             </div>
             </section>
 
@@ -424,10 +239,6 @@
                 <p>Logiciel</p>
                 <p>Langage</p>
             </section>
-          
-        </main>
-
-
 
             <footer id="contact">
 
