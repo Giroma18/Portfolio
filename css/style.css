@@ -501,8 +501,19 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
   z-index: 10;
 
   pointer-events: none;
+
+  color: #e5ebff;
 }
 
+.info p {
+
+  color: #e5ebff;
+}
+
+.info h4 {
+
+  color: #b7eb26;
+}
 
 .item img {
   transition: transform 0.4s ease;
