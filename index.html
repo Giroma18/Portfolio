@@ -20,7 +20,7 @@
             <span>Accueil</span>
         </a>
 
-        <a href="#projects">
+        <a href="#gallerie">
             <i class="fa-solid fa-layer-group"></i>
             <span>Projets</span>
         </a>
@@ -37,23 +37,25 @@
 
         </nav>
 
-        <div style="display: flex; flex-direction: column; align-items: center;" class="parallax" data-speed="0.5">
+        <div id="home" style="display: flex; flex-direction: column; align-items: center;" class="parallax" data-speed="0.5">
 
-            <header style=" margin-bottom: 100px;">
+            <header>
                 
                 <h1>Valérie Giroux</h1>
                 <h2>Designer graphique & Intégratrice multimédia</h2>
 
                 <p>
                 Je conçois des expériences visuelles et numériques qui allient créativité,
-                design et technologie.
+                design et technologie.<br>
+                
                 </p>
 
-                <a href="#gallerie" class="btn">Voir mes projets</a>
-
+              <a href="#gallerie">Voir mes projets</a>
             </header>
 
-            <section class="relative">
+
+            <div class="intro">
+            <section id="about" class="relative">
                 <div class="liquid"></div>
                 <div class="textIntro">
                 
@@ -65,13 +67,14 @@
                     fonctionnalité et expérience utilisateur.
                 </p>
 
-                <p style="color: white;">
-                    Mes valeurs sont l'honnêteté, la ponctualité et l'ouverture d'esprit.
-                    Je privilégie la collaboration et la recherche de solutions créatives
-                    adaptées aux besoins de chaque projet.
-                </p>
                 </div>
-            </section>         
+            </section>
+                <div class="fondu-en-bas">
+                    <video autoplay loop muted playsinline  class="video-responsive">
+                        <source  src="./videos/Intro.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
         </div>
 
         <section id="gallerie">
@@ -150,22 +153,19 @@
                         </div>
                     </div>
  
-                 <div class="conteneurDesPhotos fondu-en-bas">
-                <div class="section fondu-en-bas">
+                <div class="item fondu-en-bas">
                     <video autoplay loop muted playsinline  class="video-responsive">
                         <source  src="./videos/Tournois.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la vidéo HTML5.
                     </video>
                     <div class="info">
                         <h4>Vidéo Promotionnelle</h4>
-                        <h4><a href="https://youtu.be/hSlbCLoGyIA">https://youtu.be/hSlbCLoGyIA</a></h4>
                         <p> 
                             Création d’une vidéo promotionnelle fictive avec After Effects pour annoncer un tournoi de volleyball à Montréal. Le travail inclut l’animation graphique, le montage visuel et la mise en scène d’éléments dynamiques pour renforcer l’impact visuel. 
                         </p>
          
                         <div class="logiciel">
-                            <p><b>Logiciels :</b></p>   
-                            <img class="logo" src="./images/Logo/aftereffect.png" alt="logo">
+                            <p><b>Logiciels :</b>
+                            After Effect</p>   
                         </div>
                     </div>
                 </div>
@@ -196,38 +196,93 @@
 
             
             <section id="Experience" style="background-color: white;">
-                <h1> Expérience </h1>
-                <p>J'ai débuté au collège de Maisonneuve dans le programme d'intégration multimédia</p>
-  
+                <h1> Expériences </h1>
+
                       <div class="sectionCarrousel fondu-en-bas">
-                        <h4> Le fol Espoir</h4>
-                        <div class="container">
+          
+                 
+                            <div class="carrousel">  
 
-                            <button class="prev prev1">◀</button>
-                            <div class="galerie" id="slider1">  
-
-                                 <a href="./images/GrandeTaille/AfficheGeneraleFE.jpg"> <img class="image" src="./images/GrandeTaille/AfficheGeneraleFE.jpg" alt="Affiches"></a>
+                                <div class="carrousel-slide">
+                                    <a href="./images/GrandeTaille/AfficheGeneraleFE.jpg"> <img class="image" src="./images/GrandeTaille/AfficheGeneraleFE.jpg" alt="Affiches"></a>
+                                </div>
+                                <div class="carrousel-slide">
                                 <a href="./images/GrandeTaille/AfficheFEutopie 1.png"><img class="image" src="./images/GrandeTaille/AfficheFEutopie 1.png" alt="Affiches"></a> 
-                                <a href="./images/GrandeTaille/Appelatheme.png"> <img class="image" src="./images/GrandeTaille/Appelatheme.png" alt="Affiches"></a>
-                                <a href="./images/GrandeTaille/ProjetATheme2.png"> <img class="image" src="./images/GrandeTaille/ProjetATheme2.png" alt="Affiches"></a>
+                                </div>
+                                <div class="carrousel-slide">
+                                <a href="./images/GrandeTaille/pageCouverture.png"> <img class="image" src="./images/GrandeTaille/pageCouverture.png" alt="Affiches"></a>
+                                </div>
+
+                                
                             </div> 
-                            <button class="next next1">▶</button>
-                        </div>
-                        <div class="info">
-                            <h4>Le fol espoir</h4>
-                            <p> 
-                                Création d’une affiche promotionnelle pour Le Fol Espoir, une revue qui met en scène les œuvres littéraires et cinématographiques des étudiants du Collège de Maisonneuve.
+                            <div class="fleche">
+                                <button class="carrousel-btn--prev">◀</button>
+                                <button class="carrousel-btn--next">▶</button>
+                            </div>
+                        <div>
+                            <h1> Le fol Espoir <br> 2022-2026</h1>
+                            <p>  
+                                Le fol espoir est une revue regroupant les oeuvres des  étudiants en littératures et cinéma.
+                                J'ai fait la création de plusieurs affiche promotionnelle pour Le Fol Espoir, une revue qui met en scène les œuvres littéraires et cinématographiques des étudiants du Collège de Maisonneuve.
                             </p>
     
                                   
                             <div class="logiciel">
-                                <p><b>Logiciels :</b></p>   
-                                <img class="logo" src="images/Logo/illustrator.png" alt="">
-                                <img class="logo" src="images/Logo/photoshopLogo.png" alt="">
+                                <p><b>Logiciels :</b>
+                                Photoshop - Illustrator</p>   
                             </div>
                         </div>
                     </div>
-                <p>Stage au CHU</p>
+                    
+                    <div class="sectionCarrousel fondu-en-bas">
+                              
+                    <div class="carrousel2">
+                                <div class="carrousel-slide2">
+                                <a href="./images/Maquette/Maquette1.png"><img src="./images/Maquette/Maquette1.png" alt=""></a>
+                                </div>
+                                
+                                  <div class="carrousel-slide2">
+                                <a href="./images/Maquette/Maquette2.png"><img src="./images/Maquette/Maquette2.png" alt=""></a>
+                                </div>
+
+                                  <div class="carrousel-slide2">
+                                <a href="./images/Maquette/Maquette3.png"><img src="./images/Maquette/Maquette3.png" alt=""></a>
+                                </div>    
+                                  
+                                <div class="carrousel-slide2">
+                                <a href="./images/Maquette/Maquette4.png"><img src="./images/Maquette/Maquette4.png" alt=""></a>
+                                </div>    
+                                
+                                <div class="carrousel-slide2">
+                                <a href="./images/Maquette/Maquette5.png"><img src="./images/Maquette/Maquette5.png" alt=""></a>
+                                </div>
+
+                                <div class="carrousel-slide2">
+                                <a href="./images/Maquette/Maquette6.png"><img src="./images/Maquette/Maquette6.png" alt=""></a>
+                                </div>    
+                    </div>
+
+                    <div class="fleche">
+                        <button class="carrousel-btn--prev2">◀</button>
+                        <button class="carrousel-btn--next2">▶</button>
+                    </div>
+                        
+                    <div>
+                            <h1> Hub Grossesse en santé <br> 23 mars 2026 - 15 mai 2026</h1>
+                            <p> 
+                        Hub Grossesse en santé est un site appartenant au Centre de recherche de l'Hôpital Sainte-Justine qui fournit de l'information 
+                        sur la prise de médicaments pendant la grossesse. J'ai contribué à la création de contenu pour les réseaux sociaux ainsi 
+                        qu'à la conception d'une maquette pour le design de leur site Web.
+                            </p>
+    
+                                  
+                            <div class="logiciel">
+                                <p><b>Logiciels :</b>
+                                Photoshop - Illustrator - Figma</p>   
+                            </div>
+                        </div>
+                    </div>
+
 
             </section>
 
@@ -258,27 +313,32 @@
             </section>
 
             <footer id="contact">
-
                 <div>
                 <h1>Travaillons ensemble</h1>
-
                 <p>
                     N'hésitez pas à me contacter pour discuter d'un projet ou d'une
-                    opportunité professionnelle.
+                    opportunité professionnelle.<br>
+
                 </p>
-        
-                </div> 
+                
+                </div>
+                <div  style="margin:1rem;">
+                <a class="btn"
+                href="mailto:girouxmartone@hotmail.com">
+                Me contacter</a> 
+                </div>
+
                 <div class="reseaux">
                   <a href="https://www.linkedin.com/in/valérie-g-a512572b5" target="_blank" rel="noopener noreferrer"><img class="logo" src="./images/Logo/LinkedIn.png" alt="logoLinfedin"></a>
                   <a href="https://www.artstation.com/giroma"><img class="logo" src="./images/Logo/Arstation.png" alt="logoLinfedin"></a>
-                  <a href="mailto:girouxmartone@hotmail.com"><img class="logo" src="./images/Logo/mail.png" alt="logoLinfedin"></a>
-                  <a href="youtube"></a>
+                  <a href="https://www.youtube.com/@Giroma-Art"><img class="logo" src="./images/Logo/logoYTB.webp" alt="LogoYoutube"></a>
                 </div>
 
                 <p class="copyright">©2025 Portfolio de Valérie. Tous droits réservés.</p>
             </footer>
     </body>
     <script src="js/index.js"></script>
+    <script src="js/carrousel.js"></script>
 </html>
 
 

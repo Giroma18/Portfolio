@@ -86,6 +86,8 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 			}
 		}
 
+
+
      // permettre au menu de glisser vers le haut lors du défilement vers le bas et de revenir 
         
         let lastScrollTop = 0; // position du scroll précédente
@@ -114,6 +116,7 @@ window.addEventListener("DOMContentLoaded", gererAffichageContenuSections);
 	    }
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // éviter les valeurs négatives
         }
+
 
 function enableDragScroll(slider) {
     let isDragging = false;
@@ -165,9 +168,4 @@ window.addEventListener("scroll", function () {
     el.style.backgroundPosition = `center ${y}px`;
   });
 });
-
-
-
-
-
 
