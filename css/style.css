@@ -39,6 +39,10 @@ body {
 	 background: #0b0b0f;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
 
 .parallax {
   background-image:  linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url('../images/Ville.jpg');
@@ -140,10 +144,6 @@ body {
 
 }
 
-.section:hover {
-	border:yellow solid 2px;
-
-}
 
 .image {
     width: 90%;
@@ -154,29 +154,6 @@ body {
 .container {
   display: flex;
   align-items: center;
-}
-
-.galerie {
-  cursor: grab;
-  user-select: none; /* empêche la sélection de texte quand on glisse */
-
-
-  display: flex;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  width: 100%;
-}
-
-.galerie.dragging {
-    cursor: grabbing;
-}
-
-.galerie img {
-  width: 300px;
-  margin-right: 10px;
-
-  pointer-events: none;
-  user-select: none;
 }
 
 .sectionCarrousel {
@@ -296,34 +273,8 @@ a{
   }
 }
 
-.segment {
-  width: 10px;
-  height: 5px;
-  background: black;
-  position: absolute;
-  animation: moveSnake 4s linear infinite;
-}
 
-.segment2 {
-  width: 10px;
-  height: 5px;
-  background: yellow;
-  position: absolute;
-  animation: moveSnake 4s linear infinite;
-}
 
-.delay1 { animation-delay: 0.2s; }
-.delay2 { animation-delay: 0.4s; }
-.delay4 { animation-delay: 0.8s; }
-.delay5 { animation-delay: 0.10s; }
-
-@keyframes moveSnake {
-  0%   { transform: translate(0, 0); }
-  25%  { transform: translate(10%, 0);opacity: 0; }
-  50%  { transform: translate(10%, 500px);opacity: 0; }
-  75%  { transform: translate(0, 180px); opacity: 0; }
-  100% { transform: translate(0, 0); opacity: 0; }
-}
 
 .vertical-gradient-text {
   font-size: 2rem;
@@ -426,19 +377,41 @@ a{
 header {
     margin: auto 0;
     padding: 50px;
+    font-size: 1rem;
+}
+
+header p{
+color: #000000;
+font-size: 1rem;
+font-weight: lighter;
+}
+
+@media (min-width: 768px) {
+  
+  header {
+    margin: auto 0;
+    padding: 50px;
     font-size: 3rem;
+  }
+
+  header h2{
+  color: #efff11;
+  text-shadow: 11px 6px 0 #000000;
+  }
+
+  header p{
+    color: #ffffff;
+    background-color: #000;
+  }
+
 }
 
 header h2{
 color: #efff11;
-text-shadow: 11px 6px 0 #000000;
-}
-header p{
-color: #e5ebff;
-font-size: 1.75rem;
-font-weight: normal;
+text-shadow: 1.5px 2px 0 #000000;
 
 }
+
 header > * {
     opacity: 0;
     transform: translateY(25px);
