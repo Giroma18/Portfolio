@@ -59,7 +59,7 @@ body {
 	overflow: hidden;
 
 	background: rgba(255,255,255,0.04);
-	border: 1px solid rgba(255,255,255,0.8);
+
 	border-radius: 32px;
 
 	backdrop-filter: blur(30px);
@@ -377,13 +377,15 @@ a{
 header {
     margin: auto 0;
     padding: 50px;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 header p{
-color: #000000;
-font-size: 1rem;
-font-weight: lighter;
+  color: #ffffff;
+  background-color: #000;
+  font-size: 1rem;
+  font-weight: lighter;
+  width: 50vw;
 }
 
 @media (min-width: 768px) {
@@ -397,11 +399,6 @@ font-weight: lighter;
   header h2{
   color: #efff11;
   text-shadow: 11px 6px 0 #000000;
-  }
-
-  header p{
-    color: #ffffff;
-    background-color: #000;
   }
 
 }
@@ -487,7 +484,7 @@ footer {
     text-align: center;
 }
 
-footer .btn, header a{
+footer .btn, header .btn{
     background-color: #ffffff;
     color: #000;
     margin-top : 20px;
@@ -502,7 +499,7 @@ footer .btn, header a{
 
 }
 
-footer .btn:hover, header a:hover{
+footer .btn:hover, header .btn:hover{
     background-color: #ffe100;
 }
 
@@ -522,8 +519,8 @@ footer .btn:hover, header a:hover{
 }
 
 .logo {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s ease;
 }
 
