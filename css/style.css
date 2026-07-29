@@ -45,7 +45,7 @@ body {
 }
 
 .parallax {
-  background-image:  linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url('../images/Ville.jpg');
+  background-image:  linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url('../images/GrandeTaille/Animalie.png');
   height: 170vh;
   background-size: cover;
   background-position: center;
@@ -382,7 +382,6 @@ header {
 
 header p{
   color: #ffffff;
-  background-color: #000;
   font-size: 1rem;
   font-weight: lighter;
   width: 50vw;
@@ -417,6 +416,7 @@ header > * {
 
 header h1 {
     animation-delay: .2s;
+    color: #dfdfdf;
 }
 
 header h2 {
@@ -767,11 +767,11 @@ On déplace le menu vers la droite, en lui enlevant la translation déjà appliq
 
   aspect-ratio: 4 / 5;
 
-  transition: border 0.4s ease;
+  transition: border 0.5s ease;
   
 }
 .item:hover {
-  border: #b7eb26 solid 2px;
+  border: #b7eb26 solid 1px;
 }
 
 /* Description flottante */
